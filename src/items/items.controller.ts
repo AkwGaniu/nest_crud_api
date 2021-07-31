@@ -33,7 +33,6 @@ export class ItemsController {
 
     @Put(':id')
     async updateItem(@Body() item: CreateItemDto, @Param('id') id): Promise<Item> {
-        console.log(item)
         return await this.itemService.updateItem(id, item as Item)
     }
 
